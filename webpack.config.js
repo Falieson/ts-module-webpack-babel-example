@@ -15,9 +15,8 @@ module.exports = {
 		publicPath: "build/",
     path: resolve(rootDir, './build'),
 
-    library: 'AudioJS',
-    libraryTarget: 'var',
-    // libraryTarget: 'umd', // Fix: "Uncaught ReferenceError: exports is not defined".
+    library: 'makecats',
+    libraryTarget: 'commonjs-module',
     libraryExport: 'default'
   },
 
@@ -35,7 +34,7 @@ module.exports = {
           options: {
             cacheDirectory: true,
             presets: [
-              ["@babel/preset-env",{"modules": "auto"}],
+              ["@babel/preset-env",{"modules": "commonjs"}],
               "@babel/preset-typescript"
             ],
             plugins: [
