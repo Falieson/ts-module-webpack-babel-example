@@ -1,27 +1,57 @@
-const path = require('path');
+const { resolve } = require('path');
+
+const rootDir = resolve(__dirname)
 
 module.exports = {
-  entry: './src/index.ts',
   resolve: {
-    extensions: [ '.ts' ],
+    extensions: ['.ts'],
   },
+  context: resolve(rootDir, './src'),
+  entry: {
+    index: './index.ts',
+  },
+  output: {
+    filename: '[name].js',
+		publicPath: "build/",
+    path: resolve(rootDir, './build'),
+
+    library: 'AudioJS',
+    libraryTarget: 'var',
+    // libraryTarget: 'umd', // Fix: "Uncaught ReferenceError: exports is not defined".
+    libraryExport: 'default'
+  },
+
+  mode: 'production',
+  performance: {
+    hints: "warning",
+  },
+  
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+            presets: [
+              ["@babel/preset-env",{"modules": "auto"}],
+              "@babel/preset-typescript"
+            ],
+            plugins: [
+              "@babel/proposal-class-properties",
+              "@babel/proposal-object-rest-spread"
+            ],
+          }
+        },
         exclude: [
           /node_modules/,
-          /^(.*\.test\.ts$)/
+          /.*\.test\.ts/
         ],
-      },
+      }
     ],
   },
-  output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'build'),
-    library: 'cats',
-    libraryTarget: 'var',
-    libraryExport: 'default'
+  node: {
+    fs: 'empty'
   },
 };

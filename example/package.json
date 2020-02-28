@@ -1,0 +1,21 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack -p --config=./webpack.config.js",
+    "exec": "node dist/index.bundle.js",
+    "start": "npm run build && npm run exec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@local/ts-module-example": "../"
+  },
+  "devDependencies": {
+    "webpack": " 4.41.6",
+    "webpack-cli": "3.3.11"
+  }
+}
