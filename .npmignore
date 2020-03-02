@@ -1,0 +1,33 @@
+# core
+src/
+scripts/
+CHANGELOG.md
+
+# configs
+babel.config.json
+.eslintrc
+tslint.json
+tsconfig.*.json
+tsconfig.json
+jest/
+webpack/
+
+# git
+.git/
+.github/
+.gitignore
+
+# npm
+.npmrc
+node_modules/
+npm-debug.log
+npm-shrinkwrap.json
+package-lock.json
+
+# IDE
+.vscode/
+.editorconfig
+.reference
+
+# SERVICES
+.circleci/

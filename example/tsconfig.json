@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": false,
+    "outDir": "./dist/",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    // "strict": true,
+    "target": "es5",
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "reportFiles": [
+        "./src/**/*"
+    ]
+  }
+}
