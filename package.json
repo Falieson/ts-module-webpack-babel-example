@@ -13,13 +13,21 @@
     "build": "npm-run-all -s build-clean -p build:*",
     "build-clean": "rimraf build",
     "build:ts": "webpack -p --config=./webpack.config.js",
-    "build:types": "tsc  -p tsconfig.types.json",
+    "build:types": "tsc  -p tsconfig.types.out.json",
+    "check:types": "tsc  -p tsconfig.types.check.json",
+    "example": "npm run build && cd example && npm i && npm run start",
     "test": "echo \"Error: no test specified\" && exit 0",
     "release": "npm-run-all -s release:*",
     "release:check": "bash ./scripts/are-you-sure.sh",
-    "release:pre": "npm-run-all -p test build",
+    "release:pre": "npm-run-all -p test check:types -p build",
     "release:publish": "npm run npm:publish",
     "npm:publish": "npm publish"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run release:pre",
+      "pre-push": "npm run release:pre"
+    }
   },
   "devDependencies": {
     "@babel/core": "7.8.4",

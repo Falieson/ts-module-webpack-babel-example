@@ -1,1 +1,1 @@
-{"version":3,"file":"makeCat.d.ts","sourceRoot":"","sources":["../src/makeCat.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,MAAM,EAAC,MAAM,aAAa,CAAA;AAElC,MAAM,WAAW,GAAG;IAClB,IAAI,EAAE,OAAO,CAAC;IACd,IAAI,EAAE,MAAM,EAAE,CAAC;IACf,IAAI,EAAE,MAAM,CAAC;IACb,UAAU,EAAE,MAAM,CAAA;IAClB,UAAU,EAAE,MAAM,CAAA;IAClB,UAAU,EAAE,MAAM,CAAA;CACnB;AAED,MAAM,CAAC,OAAO,UAAU,OAAO,IAAI,GAAG,CASrC"}
+{"version":3,"file":"makeCat.d.ts","sourceRoot":"","sources":["../src/makeCat.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,GAAG,EAAE,MAAM,aAAa,CAAA;AAEjC,MAAM,CAAC,OAAO,UAAU,OAAO,IAAI,GAAG,CASrC"}

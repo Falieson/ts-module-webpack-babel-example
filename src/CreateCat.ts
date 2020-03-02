@@ -1,7 +1,7 @@
-import { Cat } from './Cat.types'
+// import { Cat } from './Cat.types'
 
-export default function makeCat(): Cat {
-  return {
+export default class CreateCat {
+  data = {
     hair: true,
     eyes: ["green", "blue"],
     legs: 4,

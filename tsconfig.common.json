@@ -15,8 +15,8 @@
     "module": "esnext",
     "moduleResolution": "node",
 
-    // "esModuleInterop": true,
-    // "isolatedModules": true, // Disallow features that require cross-file information for emit.
+    "esModuleInterop": true,
+    "isolatedModules": true, // Disallow features that require cross-file information for emit.
 
     "downlevelIteration": true,               /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
     "declaration": true,                      /* Generates corresponding '.d.ts' file. */
